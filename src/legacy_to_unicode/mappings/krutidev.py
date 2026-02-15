@@ -1,11 +1,25 @@
 """
-Minimal KrutiDev/Chanakya glyph mapping starter.
-Extend this mapping for production-grade conversion.
+KrutiDev/Chanakya glyph mapping.
+Note: This table is intended to be comprehensive for common KrutiDev 010 usage.
 """
 
 KRUTIDEV_MAPPING = {
-    "¼": "ऋ",
-    "¶": "ऌ",
+    # Vowels
+    "v": "अ",
+    "vk": "आ",
+    "bZ": "ई",
+    "b": "इ",
+    "m": "उ",
+    "Å": "ऊ",
+    "_": "ऋ",
+    "d_": "ॠ",
+    "l": "ए",
+    "vS": "ऐ",
+    "vks": "ओ",
+    "vkS": "औ",
+    "Q": "ऌ",
+
+    # Consonants
     "d": "क",
     "[k": "ख",
     "x": "ग",
@@ -14,20 +28,58 @@ KRUTIDEV_MAPPING = {
     "N": "छ",
     "t": "ज",
     "/": "झ",
+    "´": "ञ",
     "o": "ट",
     "n": "ठ",
+    "M": "ड",
+    ">": "ढ",
+    "<": "ण",
+    "r": "त",
+    "F": "थ",
+    "D": "द",
+    '\"': "ध",
+    "u": "न",
+    "i": "प",
+    "I": "फ",
+    "P": "ब",
+    "H": "भ",
+    "e": "म",
+    ";": "य",
+    "j": "र",
+    "y": "ल",
+    "oY": "ळ",
+    "'": "व",
+    "c": "श",
+    "C": "ष",
+    "lS": "स",
+    "g": "ह",
+
+    # Halant and nukta
+    "~": "्",
+    "Z": "र्",
+    '\"k': "क़",
+    '\"Q': "ख़",
+    '\"x': "ग़",
+    '\"u': "ज़",
+    '\"j': "ड़",
+    '\"<': "ढ़",
+    '\"v': "फ़",
+
+    # Matras
     "k": "ा",
-    "b": "ि",
-    "B": "ी",
-    "l": "ु",
-    "L": "ू",
-    "m": "े",
-    "M": "ै",
-    "H": "ो",
-    "O": "ौ",
+    "f": "ि",
+    "h": "ी",
+    "q": "ु",
+    "w": "ू",
+    "s": "े",
+    "S": "ै",
+    "ks": "ो",
+    "kS": "ौ",
     "a": "ं",
     "A": "ँ",
     "%": "ः",
+
+    # Digits
     "0": "०",
     "1": "१",
     "2": "२",
@@ -38,4 +90,9 @@ KRUTIDEV_MAPPING = {
     "7": "७",
     "8": "८",
     "9": "९",
+
+    # Punctuation / misc
+    "@": "।",
+    "$": "॥",
+    "|": "।",
 }
