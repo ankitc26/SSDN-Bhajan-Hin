@@ -15,7 +15,7 @@ OUTPUT_DIR = PROJECT_ROOT / "output"
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Legacy Hindi PDF processor")
     parser.add_argument("--pdf", required=True, help="Path to input PDF")
-    parser.add_argument("--db", required=True, help="Path to SQLite database")
+    parser.add_argument("--json", required=True, help="Path to output JSON")
     parser.add_argument("--out-pdf", help="Path to output transliterated PDF")
     parser.add_argument(
         "--log-level",
@@ -40,12 +40,12 @@ def main() -> None:
     if not pdf_path.exists():
         raise SystemExit(f"PDF not found: {pdf_path}")
 
-    db_path = Path(args.db).expanduser()
-    if not db_path.is_absolute():
-        if db_path.parent == Path("."):
-            db_path = OUTPUT_DIR / db_path.name
+    json_path = Path(args.json).expanduser()
+    if not json_path.is_absolute():
+        if json_path.parent == Path("."):
+            json_path = OUTPUT_DIR / json_path.name
         else:
-            db_path = PROJECT_ROOT / db_path
+            json_path = PROJECT_ROOT / json_path
 
     out_pdf_path = None
     if args.out_pdf:
@@ -56,7 +56,7 @@ def main() -> None:
             else:
                 out_pdf_path = PROJECT_ROOT / out_pdf_path
 
-    run_pipeline(str(pdf_path), str(db_path), str(out_pdf_path) if out_pdf_path else None)
+    run_pipeline(str(pdf_path), str(json_path), str(out_pdf_path) if out_pdf_path else None)
 
 
 if __name__ == "__main__":

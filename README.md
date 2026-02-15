@@ -17,11 +17,11 @@ Offline Indic text processing pipeline for legacy-font Hindi PDFs on macOS.
    - `source .venv/bin/activate`
 
 ## Usage
-Process a PDF into SQLite and generate a transliterated PDF:
+Process a PDF into JSON and generate a transliterated PDF:
 - Place your PDF in the `PDF/` folder and run:
-   - `python -m src.cli --pdf your.pdf --db bhajans.sqlite3 --out-pdf bhajans_translit.pdf`
+   - `python -m src.cli --pdf your.pdf --json bhajans.json --out-pdf bhajans_translit.pdf`
 - You can also pass an absolute path:
-   - `python -m src.cli --pdf /full/path/to/input.pdf --db output/bhajans.sqlite3 --out-pdf output/bhajans_translit.pdf`
+   - `python -m src.cli --pdf /full/path/to/input.pdf --json output/bhajans.json --out-pdf output/bhajans_translit.pdf`
 
 Start the API:
 - `uvicorn src.api.app:app --reload`
