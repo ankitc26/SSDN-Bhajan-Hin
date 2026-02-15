@@ -1,0 +1,7 @@
+pdfplumber==0.11.4
+indic-nlp-library==0.92
+regex==2024.11.6
+indic-transliteration==2.3.60
+fastapi==0.115.8
+uvicorn==0.34.0
+reportlab==4.2.5
